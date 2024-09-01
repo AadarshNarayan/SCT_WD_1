@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://img.freepik.com/free-photo/road-through-spooky-mysterious-forest_181624-55857.jpg?t=st=1725173260~exp=1725176860~hmac=27dd020e95026835fb077c0fe5d5490798ab61859e5755621a6b372147f43ee0&w=996");
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.nature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+.nature .logo a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+}
+.nature .links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+}
+.nature .links a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 0;
+  transition: 0.2s ease;
+}
+.nature .links a:hover {
+  color: #b2d2a4
+
+  ;
+}
+.nature .buttons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px 0;
+  transition: 0.2s ease;
+}
+.nature .buttons a:not(:last-child) {
+  margin-right: 30px;
+}
+.nature .buttons .signin:hover {
+  color: #b2d2a4
+
+  ;
+}
+.nature .buttons .signup {
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 0.375rem;
+  text-align: center;
+  transition: 0.2s ease;
+}
+.nature .buttons .signup:hover {
+  background-color: #1a4314;
+  color: #fff;
+}
+.responsive-web {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 95vh;
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.responsive-web .web {
+  max-width: 50%;
+  color: #fff;
+}
+.web h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.web p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #c9c7c7;
+}
+.responsive-web .img img {
+  width: 517px;
+}
+.responsive-web .buttons {
+  margin-top: 40px;
+}
+.responsive-web .buttons a {
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+.responsive-web .buttons a:not(:last-child) {
+  margin-right: 15px;
+}
+
+.responsive-web .buttons .learn {
+  border: 1px solid #fff;
+  border-radius: 0.375rem;
+}
+.responsive-web .buttons a:hover {
+  background-color: #1a4314;
+}
+
+#menu-toggle {
+  display: none;
+}
+#hamburger-btn {
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  order: 1;
+}
+@media screen and (max-width: 1023px) {
+  .nature .logo a {
+    font-size: 1.5rem;
+  }
+  .links {
+    position: fixed;
+    left: -100%;
+    top: 75px;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    background: #1a4314;
+    flex-direction: column;
+    transition: 0.3s ease;
+  }
+  .nature #menu-toggle:checked ~ .links {
+    left: 0;
+  }
+  .nature #hamburger-btn {
+    display: block;
+  }
+  .header .buttons {
+    display: none;
+  }
+  .responsive-web .web {
+    max-width: 100%;
+    text-align: center;
+  }
+  .responsive-web img {
+    width: 100%;
+    height: auto;
+  }
+}
